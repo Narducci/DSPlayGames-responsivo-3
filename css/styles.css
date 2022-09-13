@@ -5,7 +5,8 @@
   --bg-footer: #383838;
   --color-white: #fff;
   --color-dark-gray: #797979;
-  --color-red: #DD7E92;
+  --color-red: #dd7e92;
+  --color-black: #383838;
 }
 
 * {
@@ -24,14 +25,13 @@ body {
   background-color: var(--bg-header);
   height: 90px;
   width: 100%;
-  padding: 10px; /*verificar valor deste padding*/
+  padding: 13px; /*verificar valor deste padding*/
 }
 
 .nav-main {
   width: 100%;
-  max-width: 1200px;
+  max-width: 990px;
   margin: 0 auto;
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,21 +54,21 @@ body {
 .menu-items {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around; /* space-between;*/
   list-style-type: none;
-  margin: 0;
+  margin: 0 15px;
   padding: 0;
 }
 
 .menu-items li {
-  margin: 10px;
+  margin: 15px;
   font-size: 14px;
   font-weight: 500;
 }
 
 .menu-items-main {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .menu-link-itens {
@@ -80,12 +80,10 @@ body {
   font-weight: 700;
 }
 
-@media(min-width: 480px) {
-
+@media (min-width: 540px) {
   .menu-link-itens {
-    display:contents;
+    display: contents;
   }
-
 }
 
 /*   S E C T I O N    N E W S   */
@@ -111,10 +109,13 @@ body {
   height: 67px;
   border-radius: 8px;
   border-style: none;
+  cursor: pointer;
 }
 
 .news-button-aligment {
   display: flex;
+  justify-content: center;
+  margin: 40px;
 }
 
 .card-news {
@@ -152,7 +153,7 @@ body {
 
 .card-news p {
   font-weight: 400;
-  color:  var(--color-dark-gray);;
+  color: var(--color-dark-gray);
   font-size: 10px;
 }
 
@@ -168,4 +169,166 @@ body {
   border-top: 1px solid var(--bg-header);
   margin-top: 3px;
   margin-bottom: 1px;
+}
+
+/*   S E C T I O N    G A M E S   */
+
+#games {
+  padding: 10px;
+  background-color: var(--bg-games);
+  min-height: 559px ;
+}
+
+#games h2 {
+  color: var(--bg-header);
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin: 30px 0 14px 0;
+  margin: 0 auto;
+}
+
+.card-container {
+  width: 100%;
+  max-width: 990px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-games {
+  margin: 14px 0;
+  width: 300px;
+  height: 326px;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card-games img {
+  width: 300px;
+  height: 168.54px;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-games-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-games-title h3 {
+  font-size: 18px;
+  color: var(--color-dark-gray);
+  margin: 28px 0 0 0;
+}
+
+.card-games-title p {
+  font-size: 12px;
+  color: var(--color-dark-gray);
+  margin: 0 0 13px 0;
+}
+
+.card-games-title span {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--bg-header);
+  margin: 0 0 13px 0;
+}
+.card-games-rate p {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--bg-header);
+}
+
+/*   S E C T I O N    S U B S C R I B E   */
+
+#subscribe {
+  padding: 12px;
+}
+
+#subscribe h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-dark-gray);
+  text-align: center;
+}
+
+#subscribe form {
+  padding: 42px 0 10px 0;
+  max-width: 790px;
+  background-color: var(--bg-games);
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-control {
+  display: flex;
+  justify-content: center;
+}
+
+.input-layout {
+  display: block;
+}
+
+.form-preferencias {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-dark-gray);
+}
+
+.form-input input{
+  padding: 22px;
+  font-size: 16px;
+  width: 280px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--color-dark-gray);
+}
+
+.Accept-news {
+  margin: 35px 0;
+}
+
+.game-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-submit {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 700;
+  width: 244px;
+  height: 67px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.button-reset {
+  background-color: var(--color-white);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-red);
+  width: 244px;
+  height: 67px;
+  border-radius: 8px;
+  border: 2px solid #DD7E92;
+  margin-bottom: 33px;
+}
+
+footer {
+  background-color: var(--color-black);
+}
+
+footer a, p {
+  color: var(--color-white);
+  text-decoration: none;
+
 }
