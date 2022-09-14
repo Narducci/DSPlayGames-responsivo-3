@@ -26,6 +26,7 @@ body {
   height: 90px;
   width: 100%;
   padding: 13px; /*verificar valor deste padding*/
+  position: fixed;
 }
 
 .nav-main {
@@ -87,7 +88,7 @@ body {
 /*   S E C T I O N    N E W S   */
 
 #news {
-  padding: 10px;
+  padding: 100px 10px 10px 10px;
 }
 
 #news h1 {
@@ -192,23 +193,27 @@ body {
   max-width: 990px;
   margin: 0 auto;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .card-games {
-  margin: 14px 10px;
-  width: 300px;
-  height: 326px;
+  margin: 15px 10px;
+  width: calc(100% - 28px);
+  max-width: 400px;
+  min-width: 300px;
+  /*width: 300px;
+  height: 326px;*/
   background-color: var(--color-white);
   border-radius: 8px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
 .card-games img {
-  width: 300px;
-  height: 168.54px;
+  width: 100%;
+  /*width: 300px;
+  height: 168.54px;*/
   border-radius: 8px 8px 0 0;
 }
 
@@ -297,10 +302,6 @@ body {
   display: block;
 }
 
-.option-group input {
-
-}
-
 .Accept-news {
   margin: 35px 0;
 }
@@ -386,6 +387,13 @@ p {
   height: 29.84px;
 }
 
+.subscription p {
+  color: var(--color-dark-gray);
+  font-size: 2rem;
+  margin: 30px;
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   .nav-brand {
     font-size: 24px;
@@ -409,6 +417,10 @@ p {
 
   .card-news h3 {
     font-size: 16px;
+  }
+
+  .card-games {
+    width: 300px;
   }
 
   #games h2 {
