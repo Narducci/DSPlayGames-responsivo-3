@@ -37,6 +37,10 @@ body {
   justify-content: space-between;
 }
 
+.nav-brand {
+  font-size: 18px;
+}
+
 .nav-main a {
   color: #fff;
   text-decoration: none;
@@ -168,18 +172,19 @@ body {
 /*   S E C T I O N    G A M E S   */
 
 #games {
-  padding: 10px;
+  padding: 40px 10px;
   background-color: var(--bg-games);
-  min-height: 559px ;
+  min-height: 559px;
 }
 
 #games h2 {
   color: var(--bg-header);
   font-size: 24px;
   font-weight: 700;
+  line-height: 36px;
   text-align: center;
-  margin: 30px 0 14px 0;
   margin: 0 auto;
+  margin-bottom: 28px;
 }
 
 .card-container {
@@ -189,10 +194,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 .card-games {
-  margin: 14px 0;
+  margin: 14px 10px;
   width: 300px;
   height: 326px;
   background-color: var(--color-white);
@@ -247,9 +253,11 @@ body {
   font-weight: 700;
   color: var(--color-dark-gray);
   text-align: center;
+  margin: 40px 0 16px 0;
 }
 
 #subscribe form {
+  width: 790px;
   padding: 42px 0 10px 0;
   max-width: 790px;
   background-color: var(--bg-games);
@@ -262,25 +270,35 @@ body {
   justify-content: center;
 }
 
-.input-layout {
-  display: block;
+.form-input {
+  padding: 0 10px;
 }
 
-.form-preferencias {
-  padding: 10px;
+.form-input input {
+  display: block;
+  padding: 22px;
+  font-size: 16px;
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border: 1px solid var(--color-dark-gray);
+}
+
+.form-preferences {
+  margin-top: 20px;
+  padding: 0 10px;
   font-size: 16px;
   font-weight: 400;
   color: var(--color-dark-gray);
 }
 
-.form-input input{
-  padding: 22px;
-  font-size: 16px;
-  width: 280px;
-  height: 50px;
-  margin: 10px;
-  border-radius: 4px;
-  border: 1px solid var(--color-dark-gray);
+.option-group {
+  display: block;
+}
+
+.option-group input {
+
 }
 
 .Accept-news {
@@ -289,8 +307,10 @@ body {
 
 .game-buttons {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 33px;
 }
 
 .button-submit {
@@ -302,7 +322,7 @@ body {
   height: 67px;
   border-radius: 8px;
   border: none;
-  margin-bottom: 20px;
+  margin: 10px;
 }
 
 .button-reset {
@@ -313,9 +333,12 @@ body {
   width: 244px;
   height: 67px;
   border-radius: 8px;
-  border: 2px solid #DD7E92;
-  margin-bottom: 33px;
+  border: 2px solid var(--color-red);
+  margin: 10px;
 }
+
+/*
+*/
 
 /*   S E C T I O N    F O O T E R   */
 
@@ -338,7 +361,8 @@ footer {
   text-align: center;
 }
 
-footer a, p {
+footer a,
+p {
   text-decoration: none;
   color: var(--color-white);
 }
@@ -357,14 +381,64 @@ footer a, p {
 }
 
 .footer-roles a {
- display: block;
- text-align: center;
- height: 29.84px;  
+  display: block;
+  text-align: center;
+  height: 29.84px;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 768px) {
+  .nav-brand {
+    font-size: 24px;
+  }
+
   .menu-link-itens {
     display: contents;
+  }
+
+  .card-news {
+    margin-bottom: 40px;
+  }
+
+  #news h1 {
+    font-size: 36px;
+  }
+
+  .card-news h2 {
+    font-size: 24px;
+  }
+
+  .card-news h3 {
+    font-size: 16px;
+  }
+
+  #games h2 {
+    font-size: 36px;
+    margin-bottom: 72px;
+  }
+
+  #subscribe h2 {
+    font-size: 36px;
+    margin: 40px;
+  }
+
+  .form-input {
+    padding: 0 72px;
+  }
+
+  .form-preferences {
+    padding: 0 72px;
+  }
+
+  .button-submit {
+    margin-right: 26px;
+  }
+  
+  .button-reset {
+    margin-left: 26px ;
+  }
+
+  .game-buttons {
+    margin-bottom: 52px;
   }
 
   .footer-content {
